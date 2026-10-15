@@ -2,11 +2,11 @@ Version: NAFATH-V4
 Track: Cybersecurity
 
 ## Overview
-A national service provider uses different technologies to deliver services to people every day. These may include software, AI systems, mobile applications, networks, and external libraries. If one part of the system has a security problem, it could affect other parts and put important information at risk.
+A national service provider depends on several technologies to deliver reliable digital services. These include software, AI systems, mobile applications, networks, and third-party libraries. While each technology has its own security challenges, a weakness in one area can affect the entire service and put users’ information at risk.
 
-In this brief, I explore six areas: Software, AI, Mobile, Networking, Cybersecurity, and Data. Although they focus on different things, they all play a role in keeping digital services safe. For example, developers need to protect passwords, mobile applications need secure connections, and cybersecurity teams need to know which software components their systems use.
+In this brief, I explore six areas: Software, AI, Mobile, Networking, Cybersecurity, and Data. I focus on practical security issues, from protecting API keys and testing mobile apps to understanding network attacks and tracking software dependencies.
 
-The Log4Shell vulnerability is a good example of why this matters. It showed that a problem in one software library could affect many applications. Understanding these connections can help teams find weaknesses earlier and respond more effectively.
+The Log4Shell vulnerability is a useful example of how these areas connect. A single vulnerable library can appear in many applications without developers realizing it. For me, this highlights the importance of knowing what software a system uses, checking for vulnerabilities, and responding before a small weakness becomes a bigger problem.
 
 ## Software
 Passwords and API keys should not be written directly into application code. The Twelve-Factor App approach recommends keeping configuration values that change between environments in environment variables. For example, a developer can use different settings for testing and production without changing the code. This also helps reduce the risk of accidentally sharing sensitive information on GitHub. However, environment variables still need to be protected because storing secrets outside the code does not automatically make them secure.
