@@ -24,10 +24,19 @@ OWASP MASVS provides security requirements that developers and testers can use t
 Resource: OWASP – Mobile Application Security Verification Standard - https://mas.owasp.org/MASVS/
 
 ## Networking
+BGP hijacking happens when a network incorrectly or deliberately announces internet addresses that belong to another network. This can cause internet traffic to take the wrong path or become unavailable. RPKI helps reduce this risk by allowing address holders to publish signed Route Origin Authorizations (ROAs). These records identify which networks are allowed to announce specific IP prefixes. Network operators can then check incoming routes and reject invalid announcements. However, RPKI validates the route’s origin, not every network along its path.
+
+Resource: IETF – RFC 6811: BGP Prefix Origin Validation - https://www.rfc-editor.org/info/rfc6811/
 
 ## Cybersecurity
+Log4Shell (CVE-2021-44228) showed how one vulnerable software library could put many applications at risk. The vulnerability affected certain versions of Apache Log4j 2, a library commonly used by Java applications to record logs. Under specific conditions, attacker-controlled text could trigger a JNDI lookup and potentially allow remote code execution. To deal with this problem, organizations needed to identify affected Log4j components and update them to fixed versions. This was especially challenging because some applications included Log4j indirectly through other dependencies.
+
+Resource: Apache Logging Services – Security Vulnerabilities - https://logging.apache.org/security.html
 
 ## Data
+A Software Bill of Materials (SBOM) is a list of the components used in a software application, including third-party libraries. It helps cybersecurity teams identify which applications might be affected when a new vulnerability is discovered. According to NTIA, an SBOM should include details such as component names, versions, suppliers, and dependency relationships. For example, if a vulnerable library is found, a team can use its SBOM to check which systems depend on it. However, having an SBOM does not automatically mean the software is secure.
+
+Resource: NTIA – The Minimum Elements for a Software Bill of Materials - https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf
 
 ## Misconception in My Track
 
