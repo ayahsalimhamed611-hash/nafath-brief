@@ -39,5 +39,11 @@ A Software Bill of Materials (SBOM) is a list of the components used in a softwa
 Resource: NTIA – The Minimum Elements for a Software Bill of Materials - https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf
 
 ## Misconception in My Track
+A common misconception is that every Java application using Log4j was vulnerable to Log4Shell. At first, I thought that finding the Log4j name in an application automatically meant it was affected. However, the vulnerability (CVE-2021-44228) affected specific versions of the log4j-core component, not every application using Log4j. For example, an application using only log4j-api without log4j-core was not affected by this particular vulnerability.
+
+This shows why checking the exact library and its version matters more than making assumptions. For cybersecurity teams, an accurate dependency list can save time and help them focus on the systems that actually need attention.
+
+Resource: Apache Logging Services – Security Vulnerabilities - https://logging.apache.org/security.html
 
 ## Open Question
+How can small cybersecurity teams quickly identify vulnerable third-party libraries in their applications, especially when those libraries are hidden inside other dependencies?
